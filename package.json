@@ -34,7 +34,7 @@
     "react-modal": "^3.8.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
+    "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.9",
     "babel-plugin-lodash": "^3.3.4",
     "babel-preset-gatsby-package": "^0.1.3",
