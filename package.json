@@ -4,9 +4,9 @@
   "description": "Gatsby plugin to enable routing of modal pages",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir . --ignore **/__tests__",
-    "watch": "babel -w src --out-dir . --ignore **/__tests__",
-    "prepare": "cross-env NODE_ENV=production npm run build"
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "build": "babel src --out-dir ./dist --ignore **/__tests__",
+    "watch": "babel -w src --out-dir ./dist --ignore **/__tests__"
   },
   "keywords": [
     "gatsby",
@@ -23,8 +23,8 @@
     "type": "git"
   },
   "files": [
-    "/*.js",
-    "/lib"
+    "/dist",
+    "/*.js"
   ],
   "dependencies": {
     "@babel/runtime": "^7.17.9",
