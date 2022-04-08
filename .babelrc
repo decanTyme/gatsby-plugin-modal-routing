@@ -1,6 +1,4 @@
 {
   "plugins": ["lodash"],
-  "presets": [
-    [ "babel-preset-gatsby-package", { "browser": true } ]
-  ]
+  "presets": [["babel-preset-gatsby-package", { "browser": true }]]
 }
