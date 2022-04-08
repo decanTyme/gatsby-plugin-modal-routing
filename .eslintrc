@@ -1,0 +1,31 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+    "node": true
+  },
+  "globals": {
+    "graphql": true,
+    "__PATH_PREFIX__": true,
+    "__TRAILING_SLASH__": true,
+    "__BASE_PATH__": true // this will rarely, if ever, be used by consumers
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "import/no-unresolved": [2, { "ignore": ["gatsby"] }],
+    "react/prop-types": [
+      1,
+      { "ignore": ["props", "opts"], "skipUndeclared": true }
+    ],
+    "react/jsx-props-no-spreading": 0
+  }
+}
