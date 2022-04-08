@@ -6,7 +6,9 @@
   "scripts": {
     "prepare": "cross-env NODE_ENV=production npm run build",
     "build": "babel src --out-dir ./dist --ignore **/__tests__",
-    "watch": "babel -w src --out-dir ./dist --ignore **/__tests__"
+    "watch": "babel -w src --out-dir ./dist --ignore **/__tests__",
+    "format:checkonly": "prettier . -c",
+    "format": "prettier . -w"
   },
   "keywords": [
     "gatsby",
