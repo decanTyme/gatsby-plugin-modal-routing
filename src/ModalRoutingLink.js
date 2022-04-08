@@ -10,12 +10,12 @@ const ModalRoutingLink = ({ to, asModal, state, ...rest }) => (
         state={{
           ...state,
           modal: asModal,
-          noScroll: to === closeTo
+          noScroll: to === closeTo,
         }}
         {...rest}
       />
     )}
-    </ModalRoutingContext.Consumer>
+  </ModalRoutingContext.Consumer>
 )
 
 export default ModalRoutingLink
