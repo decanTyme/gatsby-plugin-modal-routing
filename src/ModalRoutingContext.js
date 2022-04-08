@@ -1,10 +1,8 @@
 import React from 'react'
 
-export const defaultValue = {
+const ModalRoutingContext = React.createContext({
   isModal: false,
   closeTo: null,
-}
-
-const ModalRoutingContext = React.createContext(defaultValue)
+})
 
 export default ModalRoutingContext
