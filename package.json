@@ -4,7 +4,7 @@
   "description": "Gatsby plugin to enable routing of modal pages",
   "main": "index.js",
   "scripts": {
-    "prepare": "cross-env NODE_ENV=production npm run build",
+    "prepare": "cross-env NODE_ENV=production yarn build",
     "build": "babel src --out-dir ./dist --ignore **/__tests__",
     "watch": "babel -w src --out-dir ./dist --ignore **/__tests__",
     "format:checkonly": "prettier . -c",
@@ -20,12 +20,12 @@
     "modal",
     "routing"
   ],
-  "author": "Lenny Sirivong <lenny@lenny-s.com> (https://lenny-s.com)",
+  "author": "Danry Ague <ague.danryparenspatriae@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/lsirivong/gatsby-plugin-modal-routing",
-  "bugs": "https://github.com/lsirivong/gatsby-plugin-modal-routing/issues",
+  "homepage": "https://github.com/decanTyme/gatsby-plugin-modal-routing",
+  "bugs": "https://github.com/decanTyme/gatsby-plugin-modal-routing/issues",
   "repository": {
-    "url": "https://github.com/lsirivong/gatsby-plugin-modal-routing",
+    "url": "https://github.com/decanTyme/gatsby-plugin-modal-routing",
     "type": "git"
   },
   "files": [
@@ -44,6 +44,8 @@
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.9",
     "@babel/eslint-parser": "^7.17.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
     "babel-plugin-lodash": "^3.3.4",
     "babel-preset-gatsby-package": "^2.11.0",
     "cross-env": "^5.0.5",
@@ -53,6 +55,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.4.0"
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "semantic-release": "^19.0.2"
   }
 }
