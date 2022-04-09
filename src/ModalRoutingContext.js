@@ -1,8 +1,9 @@
 import React from 'react'
 
 const ModalRoutingContext = React.createContext({
-  isModal: false,
+  modal: false,
   closeTo: null,
+  setModalProps: () => {},
 })
 
 export default ModalRoutingContext

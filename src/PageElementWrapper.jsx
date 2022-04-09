@@ -13,6 +13,7 @@ const withoutPrefix = (path) => {
 const element = {}
 
 function PageElementWrapper({ props, opts }) {
+  const [modalProps, setModalProps] = React.useState({ ...opts?.modalProps })
   const modalContentRef = React.useRef(null)
   const [state, setState] = React.useState({
     prevProps: null,
@@ -32,7 +33,7 @@ function PageElementWrapper({ props, opts }) {
   React.useEffect(() => {
     if (
       state.prevProps?.location.pathname !== props.location.pathname &&
-      props.location.state.modal &&
+      props.location.state?.modal &&
       modalContentRef.current
     ) {
       modalContentRef.current.scrollTop = 0
@@ -43,7 +44,7 @@ function PageElementWrapper({ props, opts }) {
     setState({
       pathname: props?.location.pathname,
       props,
-      ...(state.props?.location.state.modal
+      ...(state.props?.location.state?.modal
         ? {
             // Old page was a modal, keep track so we
             // can render the contents while closing
@@ -96,6 +97,7 @@ function PageElementWrapper({ props, opts }) {
       closeTo: state.prevProps
         ? withoutPrefix(state.prevProps.location.pathname)
         : '/',
+      setModalProps,
     }),
     [isModal, state.prevProps]
   )
@@ -109,7 +111,7 @@ function PageElementWrapper({ props, opts }) {
         contentRef={(node) => {
           modalContentRef.current = node
         }}
-        {...opts?.modalProps}
+        {...modalProps}
         isOpen={Boolean(isModal)}
       >
         {element.modal ? (
