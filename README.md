@@ -1,6 +1,6 @@
 # gatsby-plugin-modal-routing
 
-Adds support for viewing gatsby pages within modals at their gatsby defined routes.
+Adds support for viewing gatsby pages within modals at their gatsby defined routes. This fork adds support for Gatsby v3 and forward.
 
 ## Examples
 
@@ -9,8 +9,8 @@ Adds support for viewing gatsby pages within modals at their gatsby defined rout
 
 ## Install
 
-```
-npm install --save gatsby-plugin-modal-routing
+```sh
+npm install --save @decantyme/gatsby-plugin-modal-routing
 ```
 
 ## Motivation
@@ -33,7 +33,7 @@ Add the plugin to your `gatsby-config.js`:
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-modal-routing`
+    `@decantyme/gatsby-plugin-modal-routing`
   ]
 ];
 ```
@@ -44,7 +44,7 @@ module.exports = {
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-plugin-modal-routing`,
+      resolve: `@decantyme/gatsby-plugin-modal-routing`,
       options: {
         // A selector to set react-modal's app root to, default is `#___gatsby`
         // See http://reactcommunity.org/react-modal/accessibility/#app-element
@@ -67,8 +67,8 @@ section below for creating a modal link).
 The `ModalRoutingContext` React.Context component can be used to conditionally render
 content if the page is rendered in a modal.
 
-The Context consumer is passes an object with `modal` and `closeTo` properties to it's
-child render function
+The Context consumer is passed an object with `modal` and `closeTo` properties to it's
+child render function.
 
 - `modal` (`boolean`) - indicates if the page content will be rendered in a modal. Use
 this to conditionally render modal content like a close button.
@@ -82,7 +82,7 @@ Example:
 
 import React from 'react'
 import { Link } from 'gatsby'
-import { ModalRoutingContext } from 'gatsby-plugin-modal-routing'
+import { ModalRoutingContext } from '@decantyme/gatsby-plugin-modal-routing'
 
 const ModalExamplePage = () => (
   <ModalRoutingContext.Consumer>
@@ -142,7 +142,7 @@ This is equivalent to the example above:
 ```
 // src/components/some-component.js
 
-import { Link } from 'gatsby-plugin-modal-routing'
+import { Link } from '@decantyme/gatsby-plugin-modal-routing'
 
 ...
 
@@ -188,7 +188,7 @@ content rendered under the modal and set the `noScroll` flag for you.
 ```
 // src/components/modal-content.js
 
-import { Link } from 'gatsby-plugin-modal-routing'
+import { Link } from '@decantyme/gatsby-plugin-modal-routing'
 
 ...
 
