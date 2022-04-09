@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.0.0 (2022-04-09)
+
+- BREAKING: Add support for Gatsby v4, which removes support for the legacy `replaceComponentRenderer` API.
+
 ## 1.2.0 (2020-06-28)
 
 - Fix undefined prevRouterProps reference ([#50](https://github.com/lsirivong/gatsby-plugin-modal-routing/pull/50) @misioq23)
