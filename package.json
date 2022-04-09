@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-plugin-modal-routing",
+  "name": "@decantyme/gatsby-plugin-modal-routing",
   "version": "1.2.0",
   "description": "Gatsby plugin to enable routing of modal pages",
   "main": "index.js",
@@ -38,6 +38,7 @@
     "@babel/core": "^7.17.9",
     "babel-plugin-lodash": "^3.3.4",
     "babel-preset-gatsby-package": "^2.11.0",
-    "cross-env": "^5.0.5"
+    "cross-env": "^5.0.5",
+    "semantic-release": "^19.0.2"
   }
 }
